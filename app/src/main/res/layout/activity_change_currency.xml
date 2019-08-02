@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCategory">
+
+
+    <TextView
+        android:id="@+id/text_currency"
+        android:layout_width="131dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/currency_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/currency_choose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/currency_choose"
+        android:layout_width="174dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="103dp"
+        android:layoutMode="opticalBounds"
+        app:layout_constraintBottom_toTopOf="@+id/save_button_currency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_currency" />
+
+    <Button
+        android:id="@+id/save_button_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="245dp"
+        android:text="@string/save_button_currency"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_choose" />
+</android.support.constraint.ConstraintLayout>

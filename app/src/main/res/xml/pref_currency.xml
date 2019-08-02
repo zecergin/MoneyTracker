@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/data">
+        <Preference
+
+            android:id="@+id/currencyPreference"
+            android:key="@string/ChangeCurr"
+            android:title="@string/currency_change_settings">
+            <intent
+                android:id="@+id/currencyPreferenceIntent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:action="android.intent.action.RUN"
+                android:targetClass="@string/targetClassCurrency"
+                android:targetPackage="@string/targetPackageCurrency" />
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

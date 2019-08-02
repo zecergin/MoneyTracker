@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/general" >
+        <ListPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:dialogMessage="@string/about_test2"
+            android:entries="@array/about_app"
+            android:entryValues="@array/about_app"
+            android:key="list_preference_1"
+            android:title="About MoneyTracker" />
+        <ListPreference
+            android:defaultValue="false"
+            android:dialogMessage="@string/about_test"
+            android:entries="@array/about_team"
+            android:entryValues="@array/about_team"
+            android:key="list_preference_1"
+            android:title="About Spicy Pi" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/security" ></PreferenceCategory>
+
+    <SwitchPreference
+        android:id="@+id/switch_enable_pin"
+        android:defaultValue="true"
+        android:key="EnablePin"
+        android:summary="Turn PIN option on/off"
+        android:title="@string/pin_enable" />
+
+    <Preference
+        android:dependency="EnablePin"
+        android:key="ChangePin"
+        android:singleLine="true"
+        android:title="@string/change_pin"
+        android:visibility="visible" />
+
+    <PreferenceCategory android:title="@string/data">
+        <Preference
+
+            android:id="@+id/categoryPreference"
+            android:key="@string/AddCat"
+            android:title="@string/new_category">
+            <intent
+                android:id="@+id/categoryPreferenceIntent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:action="android.intent.action.RUN"
+                android:targetClass="@string/targetClass"
+                android:targetPackage="@string/targetPackage" />
+        </Preference>
+
+        <Preference
+
+            android:id="@+id/currencyPreference"
+            android:key="@string/ChangeCurr"
+            android:title="@string/currency_change_settings">
+            <intent
+                android:id="@+id/currencyPreferenceIntent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:action="android.intent.action.RUN"
+                android:targetClass="@string/targetClassCurrency"
+                android:targetPackage="@string/targetPackageCurrency" />
+        </Preference>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

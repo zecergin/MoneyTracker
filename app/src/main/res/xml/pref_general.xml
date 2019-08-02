@@ -1,0 +1,21 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/general" />
+    <ListPreference
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="false"
+        android:dialogMessage="Application in order to track the budget and expenses and see rest of the budget according to categories or payment methods or period"
+        android:entries="@array/about_app"
+        android:entryValues="@string/about_moneyTracker"
+        android:key="list_preference_1"
+        android:title="About MoneyTracker" />
+    <ListPreference
+        android:defaultValue="false"
+        android:dialogMessage="Members; \nZeynep Ece Ergin, \nPranavi Burra, \nAman Kalra, \nTanya Stan"
+        android:entries="@array/about_team"
+        android:entryValues="@string/about_spicyPi"
+        android:key="list_preference_1"
+        android:title="About Spicy Pi" />
+
+</PreferenceScreen>

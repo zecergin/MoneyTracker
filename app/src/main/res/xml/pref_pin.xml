@@ -1,0 +1,20 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+<PreferenceCategory android:title="@string/security" ></PreferenceCategory>
+
+    <SwitchPreference
+        android:id="@+id/switch_enable_pin"
+        android:defaultValue="false"
+        android:key="EnablePin"
+        android:summary="Turn PIN option on/off"
+        android:title="@string/pin_enable" />
+
+    <Preference
+        android:id="@+id/change_pin"
+        android:dependency="EnablePin"
+        android:key="ChangePin"
+        android:singleLine="true"
+        android:title="@string/change_pin"
+        android:visibility="visible" />
+
+</PreferenceScreen>

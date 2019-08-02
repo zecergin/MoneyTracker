@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.moneytracker">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ReportFilter" />
+        <activity android:name=".SendEmail" />
+        <activity
+            android:name=".Report"
+            android:label="@string/title_activity_report"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".NewExpense" />
+        <activity android:name=".CreatePasswordActivity"
+            android:parentActivityName=".SettingsActivity"/>
+        <activity android:name=".ModifyPasswordActivity"/>
+        <activity android:name=".EnterPasswordActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddCategory"
+            android:parentActivityName=".SettingsActivity" />
+        <activity
+            android:name=".ChangeCurrency"
+            android:parentActivityName=".SettingsActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".LoggedExpense" />
+        <activity android:name=".LoggedExpense" />
+        <activity android:name=".Navigation" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

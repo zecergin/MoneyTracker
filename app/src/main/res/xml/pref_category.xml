@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/data">
+        <Preference
+
+            android:id="@+id/categoryPreference"
+            android:key="@string/AddCat"
+            android:title="@string/new_category">
+            <intent
+                android:id="@+id/categoryPreferenceIntent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:action="android.intent.action.RUN"
+                android:targetClass="@string/targetClass"
+                android:targetPackage="@string/targetPackage" />
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
